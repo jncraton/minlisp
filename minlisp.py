@@ -107,6 +107,15 @@ def eval(sexp, env=[{"+": lambda a, b: a + b}]):
     >>> eval([['define', 'x', 2], 'x'])
     2
 
+    >>> eval([['define', 'a', 5], ['define', 'b', 10], ['+', 'a', 'b']])
+    15
+
+    >>> eval([['define', 'y', 1], ['define', 'y', 2], 'y'])
+    2
+
+    >>> eval([['define', 'z', ['+', 1, 2]], 'z'])
+    3
+
     n-th Fibonacci computation using self-passing
 
     >>> eval([
