@@ -92,7 +92,7 @@ Example:
 2
 ```
 
-> [!WARN]
+> [!WARNING]
 > There is ambiguity in our Lisp dialect here between a list of expressions and a function to be evaluated. We make the decision to evaluate a function if the first item is a list is callable.
 
 ## Step 5: Nested Expressions
