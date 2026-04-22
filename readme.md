@@ -1,5 +1,7 @@
 # minlisp
 
+[![Lint](https://github.com/jncraton/minlisp/actions/workflows/lint.yml/badge.svg)](https://github.com/jncraton/minlisp/actions/workflows/lint.yml)
+
 A minimal [Lisp](https://en.wikipedia.org/wiki/Lisp_(programming_language)) interpreter written in Python
 
 ## Features
