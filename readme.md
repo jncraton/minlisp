@@ -4,6 +4,14 @@
 
 A minimal [Lisp](https://en.wikipedia.org/wiki/Lisp_(programming_language)) interpreter written in Python
 
+## Learning Outcomes
+
+After completing this assignment, learners will be able to:
+
+* Implement a recursive tree-walking interpreter to evaluate symbolic expressions.
+* Manage lexical scoping and environments using a stack of dictionaries to handle variable shadowing and lookups.
+* Differentiate between special forms and functions implementing lazy evaluation for conditional branching to control execution flow.
+
 ## Features
 
 1. Prefix function execution
