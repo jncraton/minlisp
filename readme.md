@@ -14,7 +14,7 @@ A minimal [Lisp](https://en.wikipedia.org/wiki/Lisp_(programming_language)) inte
 Complete the `parse` function so the supplied doctests pass.
 
 > [!TIP]
-> The entire `parse` function can be ~15 lines of code. If you find yourself writing a lot of code, take a step by and consider if there may be a simpler approach
+> The entire `parse` function can be ~15 lines of code. If you find yourself writing a lot of code, take a step back and consider if there may be a simpler approach.
 
 ### Step 1: Atomic Values
 
