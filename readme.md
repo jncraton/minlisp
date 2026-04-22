@@ -107,6 +107,9 @@ Example:
 
 Implement the `if` special form for branching.
 
+> [!NOTE]
+> Special forms are generally implemented differently than functions. `if` would generally not be a function defined in the global environment.
+
 Example:
 
 ```python
@@ -118,7 +121,7 @@ Example:
 
 ## Step 7: Anonymous Functions
 
-Introduce `lambda` to create [closures](<https://en.wikipedia.org/wiki/Closure_(computer_programming)>).
+Introduce the `lambda` special form to create [closures](<https://en.wikipedia.org/wiki/Closure_(computer_programming)>).
 
 Example:
 
@@ -129,7 +132,7 @@ Example:
 
 ## Step 8: Variable Binding
 
-Add the ability to define variables in the environment.
+Add the ability to define new variables in the environment via the `define` special form.
 
 Example:
 
