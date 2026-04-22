@@ -52,18 +52,7 @@ Example:
 1
 ```
 
-### Step 2: Variable Lookup
-
-Expressions can be symbols that refer to values in an [environment](<https://en.wikipedia.org/wiki/Environment_(computer_science)>).
-
-Example:
-
-```python
->>> eval('x', env=[{'x': 1}])
-1
-```
-
-### Step 3: Sequential Evaluation
+### Step 2: Sequential Evaluation
 
 A list of expressions should be evaluated in order, returning the result of the final expression.
 
@@ -74,9 +63,20 @@ Example:
 3
 ```
 
+### Step 3: Variable Lookup
+
+Expressions can be symbols that refer to values in an [environment](<https://en.wikipedia.org/wiki/Environment_(computer_science)>).
+
+Example:
+
+```python
+>>> eval('x', env=[{'x': 1}])
+1
+```
+
 ### Step 4: Primitive Function Application
 
-The core of the language is based on function calling using [prefix notation](<https://en.wikipedia.org/wiki/Polish_notation>).
+The core of the language is based on function calling using [prefix notation](<https://en.wikipedia.org/wiki/Polish_notation>). Implement the `+` operator as a built-in function.
 
 Example:
 

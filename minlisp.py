@@ -61,6 +61,16 @@ def eval(sexp, env=[{"+": lambda a, b: a + b}]):
     >>> eval([1, 2, 3])
     3
 
+    Variables can be accessed from the supplied `env`.
+
+    >>> eval('x', env=[{'x': 1}])
+    1
+
+    Nested scopes shadow values
+
+    >>> eval('x', env=[{'x': 2}, {'x': 4}])
+    2
+
     Function evaluation uses prefix notation.
 
     `+` is provided as a function in the default global `env`
@@ -80,14 +90,6 @@ def eval(sexp, env=[{"+": lambda a, b: a + b}]):
 
     >>> eval(['+', 1, ['+', 2, 2]])
     5
-
-    Nested scopes shadow values
-
-    >>> eval('x', env=[{'x': 1}])
-    1
-
-    >>> eval('x', env=[{'x': 2}, {'x': 4}])
-    2
 
     `lambda` creates anonymous functions
 
