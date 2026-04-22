@@ -74,6 +74,13 @@ Example:
 1
 ```
 
+Note that multiple scopes can be included and shadow one another.
+
+```python
+>>> eval('x', env=[{'x': 2}, {'x': 4}])
+2
+```
+
 ### Step 4: Primitive Function Application
 
 The core of the language is based on function calling using [prefix notation](<https://en.wikipedia.org/wiki/Polish_notation>). Implement the `+` operator as a built-in function.
