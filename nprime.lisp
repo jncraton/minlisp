@@ -1,0 +1,12 @@
+(
+  (define not (lambda (x) (if x 0 1)))
+  (define dec (lambda (n) (+ n -1)))
+  (define sub (lambda (a b) (if b (sub (dec a) (dec b)) a)))
+  (define lt (lambda (a b) (if b (if a (lt (dec a) (dec b)) 1) 0)))
+  (define div (lambda (a b) (if (lt a b) 0 (+ 1 (div (sub a b) b)))))
+  (define mod (lambda (a b) (if (lt a b) a (mod (sub a b) b))))
+  (define has-divisor (lambda (n d) (if (lt d 2) 0 (if (mod n d) (has-divisor n (dec d)) 1))))
+  (define is-prime (lambda (n) (if (lt n 2) 0 (if (lt n 4) 1 (not (has-divisor n (div n 2)))))))
+  (define find (lambda (count n) (if (is-prime n) (if (dec count) (find (dec count) (+ n 1)) n) (find count (+ n 1)))))
+  (find 30 2)
+)
