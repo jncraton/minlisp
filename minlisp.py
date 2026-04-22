@@ -1,0 +1,143 @@
+def parse(program):
+    """
+    Parses a Lisp string into nested Pythons lists for the eval function.
+
+    >>> parse('1')
+    1
+    >>> parse('(+ 1 1)')
+    ['+', 1, 1]
+    >>> parse('(+ 1 (+ 2 2))')
+    ['+', 1, ['+', 2, 2]]
+
+    >>> eval(parse('''((lambda (f n)
+    ...   (f f n 0 1))
+    ...  (lambda (self count cur next)
+    ...   (if count
+    ...    (self self (+ count -1) next (+ cur next))
+    ...     cur))
+    ...  10)
+    ...  '''))
+    55
+    >>> eval(parse('(+ 1 (+ 2 2))'))
+    5
+    >>> eval(parse('((lambda (n) (+ n n)) 2)'))
+    4
+    >>> eval(parse('(+ 1 (+ 2 2))'))
+    5
+    >>> eval(parse('((lambda (n) (+ n n)) 2)'))
+    4
+    """
+    tokens = program.replace("(", " ( ").replace(")", " ) ").split()
+
+    def read_from_tokens(tokens):
+        if not tokens:
+            return None
+        token = tokens.pop(0)
+        if token == "(":
+            lst = []
+            while tokens[0] != ")":
+                lst.append(read_from_tokens(tokens))
+            tokens.pop(0)
+            return lst
+        try:
+            return int(token)
+        except ValueError:
+            return token
+
+    return read_from_tokens(tokens)
+
+
+def eval(sexp, env=[{"+": lambda a, b: a + b}]):
+    """
+    Evaluates `sexp` in `env`
+
+    Literal values are returned.
+
+    >>> eval(1)
+    1
+
+    Sequences of values return the last value.
+
+    >>> eval([1, 2, 3])
+    3
+
+    Function evaluation uses prefix notation.
+
+    `+` is provided as a function in the default global `env`
+
+    >>> eval(['+', 1, 1])
+    2
+
+    >>> eval(['+', 2, -7])
+    -5
+
+    Sequences of expressions return the value of the last expression
+
+    >>> eval([['+', 1, 1], ['+', 2, 2]])
+    4
+
+    Nested subexpressions are properly evaluated
+
+    >>> eval(['+', 1, ['+', 2, 2]])
+    5
+
+    Nested scopes shadow values
+
+    >>> eval('x', env=[{'x': 1}])
+    1
+
+    >>> eval('x', env=[{'x': 2}, {'x': 4}])
+    2
+
+    `lambda` creates anonymous functions
+
+    >>> eval([['lambda', ['n'], ['+', 'n', 'n']], 2])
+    4
+
+    `if` provides a ternary operator with short-circuit evaluation
+
+    >>> eval(['if', 1, 2, 3])
+    2
+
+    >>> eval(['if', 0, 2, 3])
+    3
+
+    `define` binds a value to a name in the current scope
+
+    >>> eval([['define', 'x', 2], 'x'])
+    2
+
+    n-th Fibonacci computation using self-passing
+
+    >>> eval([
+    ...   ['lambda', ['f', 'n'], ['f', 'f', 'n', 0, 1]],
+    ...   ['lambda', ['self', 'count', 'cur', 'next'],
+    ...     ['if', 'count',
+    ...       ['self', 'self', ['+', 'count', -1], 'next', ['+', 'cur', 'next']],
+    ...        'cur'],
+    ...   ], 10
+    ... ])
+    55
+
+    n-th Fibonacci computation using `define`
+
+    >>> eval([
+    ...   ['define', 'fib',
+    ...     ['lambda', ['n'],
+    ...       ['if', ['+', 'n', -1],
+    ...         ['if', ['+', 'n', -2],
+    ...           ['+', ['fib', ['+', 'n', -1]], ['fib', ['+', 'n', -2]]],
+    ...           1],
+    ...         1]]],
+    ...   ['fib', 10]
+    ... ])
+    55
+    """
+    pass
+
+
+if __name__ == "__main__":
+    import sys
+
+    sexp = parse(open(sys.argv[1]).read())
+    print(eval(sexp))
