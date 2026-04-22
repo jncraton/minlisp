@@ -6,10 +6,33 @@ A minimal [Lisp](https://en.wikipedia.org/wiki/Lisp_(programming_language)) inte
 
 ## Features
 
-1. Basic arithmetic
-2. Lambda expressions
-3. Conditional logic
-4. Variable definition
+1. Prefix function execution
+2. `+` operator
+3. `lambda` to define functions
+4. `if`
+5. `define` to bind names to values
+
+## Example
+
+Once complete, the interpreter should be able to run basic LISP programs such as this one that can multiple two numbers:
+
+```lisp
+(
+  (define multiply 
+    (lambda (a b)
+      (
+        (lambda (f a b acc) (f f a b acc))
+        (lambda (self a b acc)
+          (if b
+            (self self a (+ b -1) (+ acc a))
+            acc))
+        a b 0
+      )
+    )
+  )
+  (multiply 6 7)
+)
+```
 
 ## Tasks
 
