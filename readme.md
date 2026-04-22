@@ -114,3 +114,10 @@ or
 ```bash
 make test
 ```
+
+You can also run a test program as:
+
+```bash
+> python3 minlisp.py fib-self-passing.lisp
+55
+```
