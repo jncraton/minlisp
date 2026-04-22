@@ -36,10 +36,10 @@ Once complete, the interpreter should be able to run basic LISP programs such as
 
 ## Tasks
 
-Complete the `parse` function so the supplied doctests pass.
+Complete the `eval` function so the supplied doctests pass.
 
 > [!TIP]
-> The entire `parse` function can be ~15 lines of code. If you find yourself writing a lot of code, take a step back and consider if there may be a simpler approach.
+> The entire `eval` function can be ~15 lines of code. If you find yourself writing a lot of code, take a step back and consider if there may be a simpler approach.
 
 ### Step 1: Atomic Values
 
