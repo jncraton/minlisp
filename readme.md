@@ -14,7 +14,7 @@ A minimal [Lisp](https://en.wikipedia.org/wiki/Lisp_(programming_language)) inte
 
 ## Example
 
-Once complete, the interpreter should be able to run basic LISP programs such as this one that can multiple two numbers:
+Once complete, the interpreter should be able to run basic LISP programs such as this one that can multiply two numbers:
 
 ```lisp
 (
