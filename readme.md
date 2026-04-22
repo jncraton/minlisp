@@ -83,7 +83,7 @@ Note that multiple scopes can be included and shadow one another.
 
 ### Step 4: Primitive Function Application
 
-The core of the language is based on function calling using [prefix notation](<https://en.wikipedia.org/wiki/Polish_notation>). Implement the `+` operator as a built-in function.
+The core of the language is based on function calling using [prefix notation](<https://en.wikipedia.org/wiki/Polish_notation>). The `+` function is already defined in the default global environment. Allow it to be called.
 
 Example:
 
