@@ -67,7 +67,7 @@ Complete the `eval` function in [minlisp.py](minlisp.py) so the supplied doctest
 
 ### Step 1: Atomic Values
 
-Start by handling the simplest possible expressions: constants.
+Start by handling simple constants.
 
 Example:
 
