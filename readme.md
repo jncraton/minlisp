@@ -164,7 +164,7 @@ In many languages, `if` is not evaluated to return a value. Conceptually, the `i
 
 ## Step 7: Anonymous Functions
 
-Introduce the `lambda` special form to create [closures](<https://en.wikipedia.org/wiki/Closure_(computer_programming)>).
+Introduce the [`lambda`](https://www.gnu.org/software/emacs/manual/html_node/elisp/Lambda-Expressions.html) special form to create [closures](<https://en.wikipedia.org/wiki/Closure_(computer_programming)>).
 
 Example:
 
