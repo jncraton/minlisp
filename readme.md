@@ -12,6 +12,12 @@ After completing this assignment, learners will be able to:
 * Manage lexical scoping and environments using a stack to handle variable shadowing and lookups.
 * Implement lazy evaluation for conditional branching to control execution flow.
 
+## Background
+
+> In the course of its development the Lisp system went through several stages of simplification and eventually came to be based on a scheme for representing the partial recursive functions of a certain class of symbolic expressions.
+>
+> [John McCarty, 1960](https://dl.acm.org/doi/epdf/10.1145/367177.367199)
+
 ## Features
 
 1. Prefix function execution
