@@ -14,7 +14,7 @@ After completing this assignment, learners will be able to:
 
 ## Background
 
-This project implements a minimal evaluator to see how symbolic expressions can drive computation. By writing a few lines of Python to handle environment lookups and function application, we can explore the same elegance McCarthy discovered when he reduced the complexity of the early Lisp system. The project focuses on the final, simplified state where a small class of symbolic expressions is sufficient to execute any partial recursive function.
+This project implements a minimal evaluator to see how symbolic expressions can drive computation. It closes the gap between lexing tokens and parsing into an AST to implement a complete interpreter for a minimal language. By writing a few lines of Python to handle environment lookups and function application, we can explore the same elegance McCarthy discovered when he reduced the complexity of the early Lisp system. The project focuses on the final, simplified state where a small class of symbolic expressions is sufficient to execute any partial recursive function.
 
 > In the course of its development the Lisp system went through several stages of simplification and eventually came to be based on a scheme for representing the partial recursive functions of a certain class of symbolic expressions.
 >
