@@ -143,7 +143,7 @@ eval(['+', 1, 1], env=[{}])
 > [!IMPORTANT]
 > There is ambiguity in our Lisp dialect here between a list of expressions and a function to be evaluated. We make the decision to evaluate a function if the first item is a list is callable.
 
-## Step 5: Nested Expressions
+### Step 5: Nested Expressions
 
 The evaluator must handle expressions within expressions.
 
@@ -154,7 +154,7 @@ Example:
 5
 ```
 
-## Step 6: Conditionals
+### Step 6: Conditionals
 
 Implement the [`if`](https://www.gnu.org/software/emacs/manual/html_node/elisp/Conditionals.html) [special form](https://www.gnu.org/software/emacs/manual/html_node/elisp/Special-Forms.html) for branching.
 
@@ -179,7 +179,7 @@ In many languages, `if` is not evaluated to return a value. Conceptually, the `i
 13
 ```
 
-## Step 7: Anonymous Functions
+### Step 7: Anonymous Functions
 
 Introduce the [`lambda`](https://www.gnu.org/software/emacs/manual/html_node/elisp/Lambda-Expressions.html) special form to create [closures](<https://en.wikipedia.org/wiki/Closure_(computer_programming)>).
 
@@ -190,7 +190,7 @@ Example:
 6
 ```
 
-## Step 8: Variable Binding
+### Step 8: Variable Binding
 
 Add the ability to define new variables in the environment via the `define` special form.
 
