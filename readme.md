@@ -21,7 +21,9 @@ This project implements a minimal evaluator to see how symbolic expressions can 
 > [John McCarty, 1960](https://dl.acm.org/doi/epdf/10.1145/367177.367199)
 
 <details><summary>Evaluation Data Flow</summary>
+
 ![Evaluation Data Flow](dataflow.svg)
+
 </details>
 
 ## Features
