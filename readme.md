@@ -8,7 +8,7 @@ A minimal [Lisp](https://en.wikipedia.org/wiki/Lisp_(programming_language)) inte
 
 After completing this assignment, learners will be able to:
 
-* Implement a recursive tree-walking interpreter to evaluate symbolic expressions.
+* Implement a recursive tree-walking interpreter to evaluate [symbolic expressions](https://en.wikipedia.org/wiki/S-expression).
 * Manage lexical scoping and environments using a stack of dictionaries to handle variable shadowing and lookups.
 * Differentiate between [special forms](https://www.gnu.org/software/emacs/manual/html_node/elisp/Special-Forms.html) and functions implementing lazy evaluation for conditional branching to control execution flow.
 
