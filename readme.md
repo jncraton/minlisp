@@ -153,7 +153,7 @@ Example:
 13
 ```
 
-This closely mirrors the ternary operation from languages like JavaScript:
+In many languages, `if` is not evaluated to return a value. Conceptually, the `if` construct in Lisp closely mirrors the ternary operation from languages like JavaScript:
 
 ```js
 >>> 1 ? 7 : 13
