@@ -215,3 +215,7 @@ You can also run a test program as:
 > python3 minlisp.py fib-self-passing.lisp
 55
 ```
+
+## Turing Completeness
+
+Despite its simplicity, this language and interpreter are [Turing complete](https://en.wikipedia.org/wiki/Turing_completeness) and support universal computation. Although it lacks explicit looping constructs, it supports arbitrary recursion through both named function bindings via `define` and anonymous self-passing techniques. The provided examples demonstrate that this minimal set of features is sufficient to derive complex logic such as primality testing and the Fibonacci sequence, demonstrating that it can compute complex partial recursive functions.
