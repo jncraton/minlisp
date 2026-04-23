@@ -42,6 +42,22 @@ Once complete, the interpreter should be able to run basic LISP programs such as
 )
 ```
 
+The above is roughly equivalent to the following in JavaScript:
+
+```js
+const multiply = (a, b) => (
+  ((f, a, b, acc) => f(f, a, b, acc))(
+    (self, a, b, acc) => (
+      b
+        ? self(self, a, b + -1, acc + a)
+        : acc
+    ),
+    a, b, 0
+  )
+)
+
+console.log(multiply(6, 7))```
+
 ## Tasks
 
 Complete the `eval` function so the supplied doctests pass.
