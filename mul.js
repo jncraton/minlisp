@@ -1,4 +1,4 @@
-const multiply = ((a, b) => (
+const multiply = (a, b) => (
   ((f, a, b, acc) => f(f, a, b, acc))(
     (self, a, b, acc) => (
       b
