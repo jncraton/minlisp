@@ -10,7 +10,7 @@ After completing this assignment, learners will be able to:
 
 * Implement a recursive tree-walking interpreter to evaluate symbolic expressions.
 * Manage lexical scoping and environments using a stack of dictionaries to handle variable shadowing and lookups.
-* Differentiate between special forms and functions implementing lazy evaluation for conditional branching to control execution flow.
+* Differentiate between [special forms](https://www.gnu.org/software/emacs/manual/html_node/elisp/Special-Forms.html) and functions implementing lazy evaluation for conditional branching to control execution flow.
 
 ## Features
 
@@ -139,7 +139,7 @@ Example:
 
 ## Step 6: Conditionals
 
-Implement the `if` special form for branching.
+Implement the `if` [special form](https://www.gnu.org/software/emacs/manual/html_node/elisp/Special-Forms.html) for branching.
 
 > [!NOTE]
 > Special forms are generally implemented differently than functions. `if` would generally not be a function defined in the global environment.
