@@ -139,7 +139,7 @@ Example:
 
 ## Step 6: Conditionals
 
-Implement the `if` [special form](https://www.gnu.org/software/emacs/manual/html_node/elisp/Special-Forms.html) for branching.
+Implement the [`if`](https://www.gnu.org/software/emacs/manual/html_node/elisp/Conditionals.html) [special form](https://www.gnu.org/software/emacs/manual/html_node/elisp/Special-Forms.html) for branching.
 
 > [!NOTE]
 > Special forms are generally implemented differently than functions. `if` would generally not be a function defined in the global environment.
