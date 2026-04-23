@@ -153,6 +153,15 @@ Example:
 13
 ```
 
+This closely mirrors the ternary operation from languages like JavaScript:
+
+```js
+>>> 1 ? 7 : 13
+7
+>>> 0 ? 7 : 13
+13
+```
+
 ## Step 7: Anonymous Functions
 
 Introduce the `lambda` special form to create [closures](<https://en.wikipedia.org/wiki/Closure_(computer_programming)>).
