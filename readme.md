@@ -56,7 +56,8 @@ const multiply = (a, b) => (
   )
 )
 
-console.log(multiply(6, 7))```
+console.log(multiply(6, 7))
+```
 
 ## Tasks
 
