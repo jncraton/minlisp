@@ -116,6 +116,13 @@ Example:
 2
 ```
 
+The `+` operator is just a function. Look it up in the current scope and call it, but do not hard-code this specific operation. When the `+` function is not provided, an exception of some kind should be raised.
+
+```python
+# Raises exception due to undefined `+`
+eval(['+', 1, 1], env=[{}])
+```
+
 > [!IMPORTANT]
 > There is ambiguity in our Lisp dialect here between a list of expressions and a function to be evaluated. We make the decision to evaluate a function if the first item is a list is callable.
 
