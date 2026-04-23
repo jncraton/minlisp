@@ -177,6 +177,10 @@ def eval(sexp, env=[{"+": lambda a, b: a + b}]):
 
 if __name__ == "__main__":
     import sys
+    import doctest
 
-    sexp = parse(open(sys.argv[1]).read())
-    print(eval(sexp))
+    failed, _ = doctest.testmod()
+
+    if failed == 0 and len(sys.argv) > 1:
+        sexp = parse(open(sys.argv[1]).read())
+        print(eval(sexp))
