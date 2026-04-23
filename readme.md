@@ -60,7 +60,7 @@ console.log(multiply(6, 7))```
 
 ## Tasks
 
-Complete the `eval` function so the supplied doctests pass.
+Complete the `eval` function in [minlisp.py](minlisp.py) so the supplied doctests pass.
 
 > [!TIP]
 > The entire `eval` function can be ~15 lines of code. If you find yourself writing a lot of code, take a step back and consider if there may be a simpler approach.
