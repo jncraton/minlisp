@@ -98,7 +98,7 @@ Example:
 1
 ```
 
-Note that multiple scopes can be included and shadow one another.
+Note that a stack of scopes can be included and [shadow](https://en.wikipedia.org/wiki/Variable_shadowing) one another.
 
 ```python
 >>> eval('x', env=[{'x': 2}, {'x': 4}])
