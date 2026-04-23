@@ -14,11 +14,15 @@ After completing this assignment, learners will be able to:
 
 ## Background
 
+This project implements a minimal evaluator to see how symbolic expressions can drive computation. By writing a few lines of Python to handle environment lookups and function application, we can observe the same elegance McCarthy discovered when he reduced the complexity of the early Lisp system. The project focuses on the final, simplified state where a small class of symbolic expressions is sufficient to represent and execute any partial recursive function.
+
 > In the course of its development the Lisp system went through several stages of simplification and eventually came to be based on a scheme for representing the partial recursive functions of a certain class of symbolic expressions.
 >
 > [John McCarty, 1960](https://dl.acm.org/doi/epdf/10.1145/367177.367199)
 
 ## Features
+
+The interpreter developed for this projects supports only a very small subset of the larger Lisp language:
 
 1. Prefix function execution
 2. `+` operator
