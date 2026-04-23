@@ -112,6 +112,11 @@ def eval(sexp, env=[{"+": lambda a, b: a + b}]):
     >>> eval(['if', 0, 2, 3])
     3
 
+    Make sure that only the branch taken is evaluated
+
+    >>> eval(['if', 1, 2, ['square', 1]])
+    2
+
     `define` binds a value to a name in the current scope
 
     >>> eval([['define', 'x', 2], 'x'])
