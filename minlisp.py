@@ -83,11 +83,8 @@ def eval(sexp, env=[{"+": lambda a, b: a + b}]):
 
     Be sure that `+` is accessed from the passed environment.
 
-    >>> try:
-    ...     eval(['+', 1, 1], env=[{}])
-    ... except:
-    ...     print('raised')
-    raised
+    >>> eval(['+', 1, 1], env=[{'+': lambda a, b: 42}])
+    42
 
     Sequences of expressions return the value of the last expression
 
